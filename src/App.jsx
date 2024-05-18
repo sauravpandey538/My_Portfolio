@@ -10,7 +10,7 @@ import profile from "../HomePage_Components/public/profilepic.jpeg";
 function App() {
   return (
     <Box>
-      <Box h={"fit-content"} boxShadow={"1px 1px 20px 1px lightgray"}>
+      <Box h={"max-content"} boxShadow={"1px 1px 20px 1px lightgray"}>
         <Navigation />
         <MyDetail profile={profile} />
       </Box>
