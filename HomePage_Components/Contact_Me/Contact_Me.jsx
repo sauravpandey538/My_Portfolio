@@ -12,7 +12,7 @@ function ContactMe() {
       justifyContent={"left"}
       alignItems={"center"}
       bgColor={"gray.120"}
-      h={"40vh"}
+      h={"55vh"}
       p={[
         ["15px", "auto"],
         ["150px", "auto"],
