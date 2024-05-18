@@ -103,7 +103,7 @@ function MyDetail({ profile }) {
         w={"100%"}
         border={"2px solid gray"}
         display={["grid", "grid", "grid", "flex"]}
-        marginTop={["30px", "30px", "30px", "10px"]}
+        marginTop={["30px", "100px", "100px", "10px"]}
         borderRadius={"10px"}
       >
         <Text
