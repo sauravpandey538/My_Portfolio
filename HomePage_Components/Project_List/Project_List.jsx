@@ -15,7 +15,7 @@ export default function ProjectList() {
   const projects = [
     {
       id: 1,
-      projectName: "Nakau resturant",
+      projectName: "ABC resturant",
       projectTitle: "Best for donburi and udon.",
       projectMainImage: Nakhau,
       websiteLink: "sauravecommerce-sauravs-projects-6a71054e.vercel.app",
