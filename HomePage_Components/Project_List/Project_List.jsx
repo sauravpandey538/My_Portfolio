@@ -3,7 +3,7 @@ import "../style.css";
 import React, { useState, useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { Box, Text, Flex, Button, Image } from "@chakra-ui/react";
+import { Box, Text, Flex, Button, Image, Link } from "@chakra-ui/react";
 // importing pictures
 
 import Amazon from "../public/Amazon.png";
