@@ -1,8 +1,7 @@
 // Photos from https://citizenofnowhe.re/lines-of-the-city
 import "../style.css";
 import React, { useState, useEffect } from "react";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaGlobe } from "react-icons/fa";
 import { Box, Text, Flex, Button, Image, Link } from "@chakra-ui/react";
 // importing pictures
 
@@ -81,7 +80,7 @@ export default function ProjectList() {
               {project.projectTitle}
             </Text>
             <Text color={"gray.600"}>{project.projectDescription}</Text>
-            <Flex gap={3} py={"20px"}>
+            <Flex gap={3} py="20px">
               <Link href={project.githubLink} isExternal>
                 <Button
                   leftIcon={<FaGithub />}
@@ -94,7 +93,7 @@ export default function ProjectList() {
 
               <Link href={project.websiteLink} isExternal>
                 <Button
-                  leftIcon={<FaLinkedin />}
+                  leftIcon={<FaGlobe />}
                   colorScheme="blue"
                   variant="outline"
                 >
