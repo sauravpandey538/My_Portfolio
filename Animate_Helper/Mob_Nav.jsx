@@ -100,7 +100,7 @@ export default function MobNav() {
           }}
           onClick={() => setIsOpen(false)}
         >
-          <button>
+          <button style={{ fontSize: "27px" }}>
             {" "}
             <MdCancel />
           </button>
