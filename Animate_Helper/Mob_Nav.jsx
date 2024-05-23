@@ -48,7 +48,7 @@ export default function MobNav() {
               closed: { rotate: 0 },
             }}
             transition={{ duration: 0.2 }}
-            style={{ originY: 0.55 }}
+            style={{ originY: 0.55, fontSize: "25px" }}
           >
             <IoReorderThreeOutline />
           </motion.div>
