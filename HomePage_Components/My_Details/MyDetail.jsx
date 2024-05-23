@@ -12,12 +12,6 @@ import { IoLogoJavascript } from "react-icons/io";
 import { DiMongodb } from "react-icons/di";
 import { SiPostman } from "react-icons/si";
 function MyDetail({ profile }) {
-  // const deviceWidth = useBreakpointValue({
-  //   base: "base",
-  //   sm: "sm",
-  //   md: "md",
-  //   g: "lg",
-  // });
   return (
     <Box p={[["auto", "15px"], ["auto", "50px"], ["auto 200px"]]}>
       <Flex flexWrap={"wrap"}>
@@ -66,23 +60,21 @@ function MyDetail({ profile }) {
             <motion.div
               style={{
                 marginTop: "40px",
-                border: "2px solid black",
                 width: "300px",
                 height: "300px",
                 outline: "100px solid white",
-                border: "2px solid black",
               }}
               animate={{
                 borderRadius: [
-                  "0%",
-                  "50%",
-                  "0%",
-                  "50%",
-                  "0%",
-                  "50%",
-                  "0%",
-                  "50%",
-                  "0%",
+                  "20%",
+                  "30%",
+                  "20%",
+                  "30%",
+                  "20%",
+                  "30%",
+                  "20%",
+                  "30%",
+                  "20%",
                 ],
                 rotate: [0, 45, 90, 135, 180, 225, 270, 315, 360],
               }}

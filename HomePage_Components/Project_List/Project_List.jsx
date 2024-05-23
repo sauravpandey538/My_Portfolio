@@ -8,43 +8,43 @@ import { Box, Text, Flex, Button, Image, Link } from "@chakra-ui/react";
 import Amazon from "../public/Amazon.png";
 import Apple from "../public/Apple.png";
 import Nakhau from "../public/Nakhau.png";
-
+import Ecommerce from "../public/Ecommerce.png";
 export default function ProjectList() {
-  console.log(Apple);
   const projects = [
     {
       id: 1,
-      projectName: "ABC resturant",
-      projectTitle: "Best for donburi and udon.",
-      projectMainImage: Nakhau,
+      projectName: "E-commerce",
+      projectTitle:
+        "Trying e-commerce website with react js and third party api",
+      projectMainImage: Ecommerce,
       websiteLink:
         "https://sauravecommerce-sauravs-projects-6a71054e.vercel.app",
       githubLink: "https://github.com/sauravpandey538/E-Commerce",
       projectDescription:
-        "Nakau is a popular Japanese fast food restaurant chain with 470 outlets across Japan, located mainly in Tokyo and Osaka ur specialties include donburi (rice bowls) topped with variety of meat and other toppings, and Kyoto-style udon soft noodles delicately flavored with a light dashi broth. Donburi and udon are two examples of everyday meals enjoyed by many Japanese that are available at reasonable prices. Nakau also serves Japanese breakfast set menu options that include grilled salmon, miso soup and eggWe hope you will find and enjoy Nakau conveniently located near your hotels and sites you visit during your stay in Japan",
+        "Welcome to our one-stop shopping destination, where you can indulge in unlimited shopping. We cater to all your fashion and accessory needs with three distinct categories: men, women, and jewelry. For men, we offer a wide range of stylish and comfortable clothing and accessories, from casual wear to formal attire. Women will love our extensive collection of fashion-forward pieces, including dresses, tops, pants, and accessories to suit any style.  Our jewelry category features exquisite pieces that add a touch of glamour to any look, including necklaces, bracelets, earrings, and rings. Enjoy unlimited shopping with us and elevate your style effortlessly!",
     },
-    {
-      id: 2,
-      projectName: "Apple",
-      projectTitle: "Think different.",
-      projectMainImage: Apple,
-      websiteLink:
-        "https://sauravecommerce-sauravs-projects-6a71054e.vercel.app",
-      githubLink: "https://github.com/sauravpandey538/E-Commerce",
-      projectDescription:
-        "Apple Inc., founded in 1976 by Steve Jobs, Steve Wozniak, and Ronald Wayne, is a global leader in technology, known for its innovative products and cohesive ecosystem. Key products like the iPhone, Mac, iPad, Apple Watch, and AirPods have revolutionized their respective markets, while services like the App Store, Apple Music, and Apple Pay enhance user experience and contribute significantly to revenue. Apple's ecosystem ensures seamless integration across devices, fostering a loyal customer base. Consistently strong financial performance, driven by product sales and a growing emphasis on software and services, underscores Apple's influence and ongoing impact on the tech industry.",
-    },
-    {
-      id: 3,
-      projectName: "Amazon",
-      projectTitle: "Work hard, Have fun, Make history.",
-      projectMainImage: Amazon,
-      websiteLink:
-        "https://sauravecommerce-sauravs-projects-6a71054e.vercel.app",
-      githubLink: "https://github.com/sauravpandey538/E-Commerce",
-      projectDescription:
-        "Amazon, founded in 1994 by Jeff Bezos, is a global e-commerce and technology giant, renowned for its vast product selection and customer-centric approach. Initially an online bookstore, Amazon quickly diversified, now offering everything from electronics to groceries through its Prime membership program, which provides fast shipping and streaming services. Beyond retail, Amazon Web Services (AWS) has become the world's leading cloud computing platform, driving significant revenue and innovation in data storage and processing. The company also ventures into hardware with products like the Kindle, Echo smart speakers, and Fire TV. Amazon's continuous expansion into new markets, such as artificial intelligence and logistics, underscores its influence and adaptability in the ever-evolving tech landscape.",
-    },
+    // {
+    //   id: 2,
+    //   projectName: "Apple",
+    //   projectTitle: "Think different.",
+    //   projectMainImage: Apple,
+    //   websiteLink:
+    //     "https://sauravecommerce-sauravs-projects-6a71054e.vercel.app",
+    //   githubLink: "https://github.com/sauravpandey538/E-Commerce",
+    //   projectDescription:
+    //     "Apple Inc., founded in 1976 by Steve Jobs, Steve Wozniak, and Ronald Wayne, is a global leader in technology, known for its innovative products and cohesive ecosystem. Key products like the iPhone, Mac, iPad, Apple Watch, and AirPods have revolutionized their respective markets, while services like the App Store, Apple Music, and Apple Pay enhance user experience and contribute significantly to revenue. Apple's ecosystem ensures seamless integration across devices, fostering a loyal customer base. Consistently strong financial performance, driven by product sales and a growing emphasis on software and services, underscores Apple's influence and ongoing impact on the tech industry.",
+    // },
+    // {
+    //   id: 3,
+    //   projectName: "Amazon",
+    //   projectTitle: "Work hard, Have fun, Make history.",
+    //   projectMainImage: Amazon,
+    //   websiteLink:
+    //     "https://sauravecommerce-sauravs-projects-6a71054e.vercel.app",
+    //   githubLink: "https://github.com/sauravpandey538/E-Commerce",
+    //   projectDescription:
+    //     "Amazon, founded in 1994 by Jeff Bezos, is a global e-commerce and technology giant, renowned for its vast product selection and customer-centric approach. Initially an online bookstore, Amazon quickly diversified, now offering everything from electronics to groceries through its Prime membership program, which provides fast shipping and streaming services. Beyond retail, Amazon Web Services (AWS) has become the world's leading cloud computing platform, driving significant revenue and innovation in data storage and processing. The company also ventures into hardware with products like the Kindle, Echo smart speakers, and Fire TV. Amazon's continuous expansion into new markets, such as artificial intelligence and logistics, underscores its influence and adaptability in the ever-evolving tech landscape.",
+    // },
   ];
 
   return (

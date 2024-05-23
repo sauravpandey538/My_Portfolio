@@ -19,6 +19,7 @@ function ContactMe() {
         ["100px", "auto"],
         ["200px auto"],
       ]}
+      id="contacts"
     >
       <Box>
         <Box>

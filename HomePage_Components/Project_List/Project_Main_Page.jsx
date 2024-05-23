@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Box, Text, Flex, Image, Spacer } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import { format } from "date-fns";
 import ProjectList from "./Project_List";
 
@@ -9,7 +8,6 @@ function ProjectMainPage({ profile }) {
   const dayOfWeek = format(dateTime, "EEEE").toUpperCase();
   const month = format(dateTime, "MMMM").toUpperCase();
   const day = format(dateTime, "d").toUpperCase();
-  console.log(dateTime);
   return (
     <Box
       h={"auto"}
@@ -18,6 +16,7 @@ function ProjectMainPage({ profile }) {
       justifyContent={"center"}
       alignItems={"center"}
       px={["15px", "30px", "50px", "100px"]}
+      id="projects"
     >
       <Box w={"100%"} float={"left"}>
         <Flex

@@ -11,7 +11,7 @@ function AboutMe() {
         ["100px", "auto"],
         ["200px auto"],
       ]}
-      //   boxShadow={"1px 1px 20px 1px lightgray"}
+      id="about"
     >
       <Flex flex={1} display={"flex"} position={"relative"}>
         <Image

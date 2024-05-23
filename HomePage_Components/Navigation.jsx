@@ -3,6 +3,7 @@
 import Texts from "../Animate_Helper/Texts";
 import React from "react";
 import MobNav from "../Animate_Helper/Mob_Nav";
+
 import {
   Flex,
   Text,
@@ -19,7 +20,6 @@ function Navigation() {
     md: "md",
     g: "lg",
   });
-  console.log(deviceWidth);
   return (
     <>
       {(deviceWidth === "md" || deviceWidth === "lg") && (
@@ -38,35 +38,30 @@ function Navigation() {
           </Text>
           <Spacer />
           <Flex gap={5}>
-            <Texts text="Home">
-              <Button bg={"none"} color={"black"} fontWeight={900} />
-            </Texts>
-            <Texts text="About">
-              <Button bg={"none"} />
-            </Texts>
-            <Texts text="Projects">
-              <Button bg={"none"} />
-            </Texts>
-            <Texts text="Contacts">
-              <Button bg={"none"} />
-            </Texts>
+            <Texts text="Home" to="home" />
+            <Texts text="About" to="about" />
+            <Texts text="Projects" to="projects" />
+            <Texts text="Contacts" to="contacts" />
           </Flex>
         </Flex>
       )}
 
       {(deviceWidth === "base" || deviceWidth === "sm") && (
-        <Flex
-          w={"100%"}
-          h={"50px"}
-          px={"20px"}
-          alignItems={"center"}
-          boxShadow={"1px 1px 10px 1px lightgray"}
-        >
-          <MobNav />
-          <Text textAlign={"center"} w={"100%"} fontWeight={900}>
-            Saurav.dev
-          </Text>
-        </Flex>
+        // <Flex
+        //   w={"100%"}
+        //   h={"50px"}
+        //   px={"20px"}
+        //   alignItems={"center"}
+        //   boxShadow={"1px 1px 10px 1px lightgray"}
+        //   backgroundColor={"white"}
+        // >
+        //   <MobNav />
+        //   <Text textAlign={"center"} w={"100%"} fontWeight={900}>
+        //     Saurav.dev
+        //   </Text>
+        // </Flex>
+        // for small devide
+        <MobNav />
       )}
     </>
   );

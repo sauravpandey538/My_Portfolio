@@ -1,35 +1,161 @@
-import React, { useState } from "react";
-import { Box, Text, Card } from "@chakra-ui/react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { IoReorderThree } from "react-icons/io5";
+import { Box, Flex, Text } from "@chakra-ui/react";
+import { IoReorderThreeOutline } from "react-icons/io5";
+import { MdCancel } from "react-icons/md";
 
-function MobNav() {
-  const [click, setClick] = useState(false);
+import Texts from "./Texts";
+
+const itemVariants = {
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 300, damping: 24 },
+  },
+  closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
+};
+
+export default function MobNav() {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Box zIndex={999}>
-      <Box>
-        <Text onClick={() => setClick(!click)}>
-          <IoReorderThree />
-        </Text>
-      </Box>
-      {click && (
-        <motion.div
-          style={{
-            height: "80%",
-            width: "70%",
-            position: "fixed",
-            top: "50px",
-            left: "0",
-          }}
-          animate={{ x: [-800, 0] }}
-          transition={{ duration: 0.5 }}
+    <motion.nav
+      initial={false}
+      animate={isOpen ? "open" : "closed"}
+      className="menu"
+      style={{
+        height: "50px",
+        position: "relative",
+        boxShadow: "1px 1px 10px 1px lightgray",
+        backgroundColor: "white",
+      }}
+    >
+      <Flex
+        w={"100%"}
+        justifyContent="center"
+        alignItems="center"
+        position="relative"
+        py={"12px"}
+      >
+        <motion.button
+          whileTap={{ scale: 0.97 }}
+          onClick={() => setIsOpen(!isOpen)}
+          style={{ position: "absolute", left: "10px" }}
         >
-          <Card h={"100%"} w={"100%"} border={"2px solid black"}></Card>
-        </motion.div>
-      )}
-    </Box>
+          <motion.div
+            variants={{
+              open: { rotate: 0 },
+              closed: { rotate: 0 },
+            }}
+            transition={{ duration: 0.2 }}
+            style={{ originY: 0.55 }}
+          >
+            <IoReorderThreeOutline />
+          </motion.div>
+        </motion.button>
+        <Box>
+          <Text>Saurav.dev</Text>
+        </Box>
+      </Flex>
+      <motion.ul
+        variants={{
+          open: {
+            clipPath: "inset(0% 0% 0% 0% round 10px)",
+            transition: {
+              type: "spring",
+              bounce: 0,
+              duration: 0.7,
+              delayChildren: 0.3,
+              staggerChildren: 0.05,
+            },
+          },
+          closed: {
+            clipPath: "inset(10% 50% 90% 50% round 10px)",
+            transition: {
+              type: "spring",
+              bounce: 0,
+              duration: 0.3,
+            },
+          },
+        }}
+        style={{
+          pointerEvents: isOpen ? "auto" : "none",
+          height: "60vh",
+          position: "absolute",
+          top: "40px",
+          left: 0,
+          backgroundColor: "white",
+          width: "50vw",
+        }}
+      >
+        <motion.li
+          variants={itemVariants}
+          style={{
+            height: "50px",
+            width: "100%",
+            textAlign: "right",
+            fontWeight: 500,
+            padding: "10px 20px",
+            pointerEvents: "visibleFill",
+          }}
+          onClick={() => setIsOpen(false)}
+        >
+          <button>
+            {" "}
+            <MdCancel />
+          </button>
+        </motion.li>
+        <motion.li
+          variants={itemVariants}
+          style={{
+            height: "50px",
+            width: "100%",
+            textAlign: "center",
+            fontWeight: 500,
+          }}
+          onClick={() => setIsOpen(false)}
+        >
+          <button>
+            <Texts text="Home" to="home" />
+          </button>
+        </motion.li>
+        <motion.li
+          variants={itemVariants}
+          style={{
+            height: "50px",
+            width: "100%",
+            textAlign: "center",
+            fontWeight: 500,
+          }}
+          onClick={() => setIsOpen(false)}
+        >
+          <Texts text="About" to="about" />
+        </motion.li>
+        <motion.li
+          variants={itemVariants}
+          style={{
+            height: "50px",
+            width: "100%",
+            textAlign: "center",
+            fontWeight: 500,
+          }}
+          onClick={() => setIsOpen(false)}
+        >
+          <Texts text="Projects" to="projects" />
+        </motion.li>
+        <motion.li
+          variants={itemVariants}
+          style={{
+            height: "50px",
+            width: "100%",
+            textAlign: "center",
+            fontWeight: 500,
+          }}
+          onClick={() => setIsOpen(false)}
+        >
+          <Texts text="Contacts" to="contacts" />
+        </motion.li>
+      </motion.ul>
+    </motion.nav>
   );
 }
-
-export default MobNav;

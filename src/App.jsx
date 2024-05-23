@@ -10,19 +10,30 @@ import profile from "../HomePage_Components/public/profilepic.jpeg";
 function App() {
   return (
     <Box>
-      <Box h={"max-content"} boxShadow={"1px 1px 20px 1px lightgray"}>
+      <Box
+        h={"max-content"}
+        boxShadow={"1px 1px 20px 1px lightgray"}
+        position={"sticky"}
+        top={0}
+        right={0}
+        zIndex={999}
+      >
         <Navigation />
-        <MyDetail profile={profile} />
       </Box>
-      <Box boxShadow={"1px 1px 20px 1px lightgray"} mt={3}>
-        <AboutMe />
-      </Box>
-      <Box boxShadow={"1px 1px 20px 1px lightgray"} mt={3}>
-        <ProjectMainPage profile={profile} />
-      </Box>
-      <Box boxShadow={"1px 1px 20px 1px lightgray"} mt={3}>
-        <ContactMe />
-        <Footer />
+      <Box id="home">
+        <Box boxShadow={"1px 1px 20px 1px lightgray"}>
+          <MyDetail profile={profile} />
+        </Box>
+        <Box boxShadow={"1px 1px 20px 1px lightgray"} mt={3}>
+          <AboutMe />
+        </Box>
+        <Box boxShadow={"1px 1px 20px 1px lightgray"} mt={3}>
+          <ProjectMainPage profile={profile} />
+        </Box>
+        <Box boxShadow={"1px 1px 20px 1px lightgray"} mt={3}>
+          <ContactMe />
+          <Footer />
+        </Box>
       </Box>
     </Box>
   );
