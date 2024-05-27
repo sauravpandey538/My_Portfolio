@@ -9,6 +9,7 @@ import Amazon from "../public/Amazon.png";
 import Apple from "../public/Apple.png";
 import Nakhau from "../public/Nakhau.png";
 import Ecommerce from "../public/Ecommerce.png";
+import Game from "../public/Game.png";
 export default function ProjectList() {
   const projects = [
     {
@@ -23,17 +24,16 @@ export default function ProjectList() {
       projectDescription:
         "Welcome to our one-stop shopping destination, where you can indulge in unlimited shopping. We cater to all your fashion and accessory needs with three distinct categories: men, women, and jewelry. For men, we offer a wide range of stylish and comfortable clothing and accessories, from casual wear to formal attire. Women will love our extensive collection of fashion-forward pieces, including dresses, tops, pants, and accessories to suit any style.  Our jewelry category features exquisite pieces that add a touch of glamour to any look, including necklaces, bracelets, earrings, and rings. Enjoy unlimited shopping with us and elevate your style effortlessly!",
     },
-    // {
-    //   id: 2,
-    //   projectName: "Apple",
-    //   projectTitle: "Think different.",
-    //   projectMainImage: Apple,
-    //   websiteLink:
-    //     "https://sauravecommerce-sauravs-projects-6a71054e.vercel.app",
-    //   githubLink: "https://github.com/sauravpandey538/E-Commerce",
-    //   projectDescription:
-    //     "Apple Inc., founded in 1976 by Steve Jobs, Steve Wozniak, and Ronald Wayne, is a global leader in technology, known for its innovative products and cohesive ecosystem. Key products like the iPhone, Mac, iPad, Apple Watch, and AirPods have revolutionized their respective markets, while services like the App Store, Apple Music, and Apple Pay enhance user experience and contribute significantly to revenue. Apple's ecosystem ensures seamless integration across devices, fostering a loyal customer base. Consistently strong financial performance, driven by product sales and a growing emphasis on software and services, underscores Apple's influence and ongoing impact on the tech industry.",
-    // },
+    {
+      id: 2,
+      projectName: "Games",
+      projectTitle: "Collaboration with Open AI",
+      projectMainImage: Game,
+      websiteLink: "https://games-six-sage.vercel.app",
+      githubLink: "https://github.com/sauravpandey538/Games",
+      projectDescription:
+        "This website showcases my cherished games, all of which I have personally created. It features simple games such as TicTacToe, Snake, and other 2D games. The TicTacToe game offers a unique twist: the cell value gets deleted after the 6th turn, ensuring no game ends in a draw. While the Snake game may seem slow initially, once you get the hang of it, you'll be speeding through like a pro. ",
+    },
     // {
     //   id: 3,
     //   projectName: "Amazon",
