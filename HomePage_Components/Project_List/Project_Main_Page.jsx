@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Box, Text, Flex, Image, Spacer } from "@chakra-ui/react";
 import { format } from "date-fns";
 import ProjectList from "./Project_List";
-
+import { motion } from "framer-motion";
 function ProjectMainPage({ profile }) {
   const [dateTime, setDateTime] = useState(new Date());
   const dayOfWeek = format(dateTime, "EEEE").toUpperCase();
@@ -44,7 +44,29 @@ function ProjectMainPage({ profile }) {
             alt="Saurav Pandey"
           />
         </Flex>
+
         <ProjectList />
+        <motion.div
+          whileInView={{
+            width: ["0%", "100%"],
+            y: 0,
+            opacity: [0, 1],
+          }}
+          transition={{ duration: 1.5 }}
+        >
+          <Text
+            w={"100%"}
+            textAlign={"center"}
+            bg={"gray.700"}
+            color={"white"}
+            py={"10px"}
+            fontWeight={700}
+            mb={"10px"}
+            h={"40px"}
+          >
+            SocialMedia website is in process...
+          </Text>
+        </motion.div>
       </Box>
     </Box>
   );
