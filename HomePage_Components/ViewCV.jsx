@@ -39,7 +39,7 @@ function ViewCV() {
             width="100%"
             height="100%"
             style={{
-              border: "2px solid black",
+              //   border: "2px solid black",
               objectPosition: "center",
               objectFit: "cover",
             }}
