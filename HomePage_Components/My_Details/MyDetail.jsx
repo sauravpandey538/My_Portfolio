@@ -11,6 +11,7 @@ import { FaNodeJs } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { DiMongodb } from "react-icons/di";
 import { SiPostman } from "react-icons/si";
+import ViewCV from "../ViewCV";
 function MyDetail({ profile }) {
   return (
     <Box p={[["auto", "15px"], ["auto", "50px"], ["auto 200px"]]}>
@@ -29,6 +30,9 @@ function MyDetail({ profile }) {
             Hi, I'm Saurav Pandey. A passionate Front-end React <br /> Developer
             based in Kathmandu, Nepal
           </Text>
+          <Box my={"20px"}>
+            <ViewCV />
+          </Box>
           <Flex gap={10} pl={"4px"}>
             <Icons
               name={FaLinkedin}
