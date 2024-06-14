@@ -40,6 +40,8 @@ function ViewCV() {
             height="100%"
             style={{
               border: "2px solid black",
+              objectPosition: "center",
+              objectFit: "cover",
             }}
           />
         </Flex>
