@@ -30,9 +30,7 @@ function MyDetail({ profile }) {
             Hi, I'm Saurav Pandey. A passionate Front-end React <br /> Developer
             based in Kathmandu, Nepal
           </Text>
-          <Box my={"20px"}>
-            <ViewCV />
-          </Box>
+
           <Flex gap={10} pl={"4px"}>
             <Icons
               name={FaLinkedin}
@@ -40,6 +38,9 @@ function MyDetail({ profile }) {
             />
             <Icons name={FaGithub} link="https://github.com/sauravpandey538" />
           </Flex>
+          <Box my={"20px"}>
+            <ViewCV />
+          </Box>
         </Box>
         <Box
           flex={1}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SauravCv from "./public/SauravCv.pdf";
 import { Button, Flex } from "@chakra-ui/react";
+import { FaFilePdf } from "react-icons/fa";
 
 function ViewCV() {
   const [showCV, setShowCV] = useState(false);
@@ -11,7 +12,12 @@ function ViewCV() {
 
   return (
     <>
-      <Button onClick={handleViewCV} border={"1px solid gray"} bg={"white"}>
+      <Button
+        onClick={handleViewCV}
+        border={"1px solid gray"}
+        bg={"white"}
+        leftIcon={<FaFilePdf />}
+      >
         View My CV
       </Button>
       {showCV && (

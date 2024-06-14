@@ -48,7 +48,10 @@ export default function MobNav() {
               closed: { rotate: 0 },
             }}
             transition={{ duration: 0.2 }}
-            style={{ originY: 0.55, fontSize: "25px" }}
+            style={{
+              originY: 0.55,
+              fontSize: "25px",
+            }}
           >
             <IoReorderThreeOutline />
           </motion.div>
@@ -81,11 +84,13 @@ export default function MobNav() {
         style={{
           pointerEvents: isOpen ? "auto" : "none",
           height: "60vh",
-          position: "absolute",
-          top: "40px",
+          position: "fixed",
+          top: "55px",
           left: 0,
-          backgroundColor: "white",
+          backgroundColor: "#F6F6F6",
           width: "50vw",
+          boxShadow: "rgba(0,0,0,0.2) 0px 4px 80px ", // this is not working why?
+          // border: "2px solid black",
         }}
       >
         <motion.li
