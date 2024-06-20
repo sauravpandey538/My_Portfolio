@@ -18,6 +18,12 @@ const itemVariants = {
 export default function MobNav() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
+  const menuItems = [
+    { text: "Home", to: "home" },
+    { text: "About", to: "about" },
+    { text: "Projects", to: "projects" },
+    { text: "Contacts", to: "contacts" },
+  ];
   return (
     <motion.nav
       initial={false}
@@ -84,84 +90,39 @@ export default function MobNav() {
         }}
         style={{
           pointerEvents: isOpen ? "auto" : "none",
-          height: "60vh",
+          height: "40vh",
           position: "fixed",
           top: "55px",
           left: 0,
           backgroundColor: theme.bg_color,
           color: theme.text_color,
           width: "50vw",
-          boxShadow: "rgba(0,0,0,0.2) 0px 4px 80px ", // this is not working why?
-          // border: "2px solid black",
+          boxShadow:
+            theme.bg_color !== "white"
+              ? "1px 1px 20px 2px lightgray"
+              : "1px 1px 20px 2px #2E2E2E",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-evenly",
         }}
       >
-        <motion.li
-          variants={itemVariants}
-          style={{
-            height: "50px",
-            width: "100%",
-            textAlign: "right",
-            fontWeight: 500,
-            padding: "10px 20px",
-            pointerEvents: "visibleFill",
-          }}
-          onClick={() => setIsOpen(false)}
-        >
-          <button style={{ fontSize: "27px" }}>
-            {" "}
-            <MdCancel />
-          </button>
-        </motion.li>
-        <motion.li
-          variants={itemVariants}
-          style={{
-            height: "50px",
-            width: "100%",
-            textAlign: "center",
-            fontWeight: 500,
-          }}
-          onClick={() => setIsOpen(false)}
-        >
-          <button>
-            <Texts text="Home" to="home" />
-          </button>
-        </motion.li>
-        <motion.li
-          variants={itemVariants}
-          style={{
-            height: "50px",
-            width: "100%",
-            textAlign: "center",
-            fontWeight: 500,
-          }}
-          onClick={() => setIsOpen(false)}
-        >
-          <Texts text="About" to="about" />
-        </motion.li>
-        <motion.li
-          variants={itemVariants}
-          style={{
-            height: "50px",
-            width: "100%",
-            textAlign: "center",
-            fontWeight: 500,
-          }}
-          onClick={() => setIsOpen(false)}
-        >
-          <Texts text="Projects" to="projects" />
-        </motion.li>
-        <motion.li
-          variants={itemVariants}
-          style={{
-            height: "50px",
-            width: "100%",
-            textAlign: "center",
-            fontWeight: 500,
-          }}
-          onClick={() => setIsOpen(false)}
-        >
-          <Texts text="Contacts" to="contacts" />
-        </motion.li>
+        {menuItems.map((item, index) => (
+          <motion.li
+            key={index}
+            variants={itemVariants}
+            style={{
+              height: "50px",
+              width: "100%",
+              textAlign: "center",
+              fontWeight: 500,
+            }}
+            onClick={() => setIsOpen(false)}
+          >
+            <button>
+              <Texts text={item.text} to={item.to} />
+            </button>
+          </motion.li>
+        ))}
       </motion.ul>
     </motion.nav>
   );
