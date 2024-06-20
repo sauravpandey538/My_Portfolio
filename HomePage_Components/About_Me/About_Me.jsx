@@ -42,14 +42,14 @@ function AboutMe() {
         ></Box>
       </Flex>
       <Box flex={1} p={["40px auto", "40px auto", "40px auto", "40px 80px"]}>
-        <Text
+        {/* <Text
           // color={"blue"}
           fontWeight={700}
           pt={"70px"}
           fontSize={"25px"}
         >
           ABOUT ME
-        </Text>
+        </Text> */}
         <Text my={"20px"} fontSize={"30px"} fontWeight={800}>
           {" "}
           Front-end Developer <br /> based in Kathmandu, Nepal

@@ -26,9 +26,9 @@ function ContactMe() {
     >
       <Box>
         <Box>
-          <Text fontWeight={700} pt={"70px"} fontSize={"22px"}>
+          {/* <Text fontWeight={700} pt={"70px"} fontSize={"22px"}>
             CONTACT
-          </Text>
+          </Text> */}
           <Text my={"10px"} fontSize={"30px"} fontWeight={800}>
             Hit me up ! 👇
           </Text>

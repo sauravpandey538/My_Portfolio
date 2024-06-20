@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { useTheme } from "../../context/WebsiteContext";
 function Footer() {
-  const { theme } = useTheme();
+  const thisYear = new Date().getFullYear();
   return (
     <Flex
       h={"20vh"}
@@ -26,7 +26,7 @@ function Footer() {
       >
         <Text fontWeight={600} fontSize={"23px"} color={"white"}>
           {" "}
-          Copyright @ 2024. All rights reserved
+          Copyright @ {thisYear}. All rights reserved
         </Text>
         <Flex gap={10} pl={"4px"} color={"white"} justifyContent={"center"}>
           <Icons
