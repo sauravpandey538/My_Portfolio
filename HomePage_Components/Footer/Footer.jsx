@@ -3,12 +3,16 @@ import { Box, Text, Flex } from "@chakra-ui/react";
 import Icons from "../../Animate_Helper/Icons";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { useTheme } from "../../context/WebsiteContext";
 function Footer() {
+  const { theme } = useTheme();
   return (
     <Flex
       h={"20vh"}
       w={"100%"}
-      bgColor={"gray.900"}
+      // backgroundColor={theme.bg_color}
+      // color={theme.text_color}
+      bg={"black"}
       justifyContent={"center"}
       alignItems={"center"}
       px={["50px", null, null, "300px"]}

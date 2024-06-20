@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { MdCancel } from "react-icons/md";
-
 import Texts from "./Texts";
+import { useTheme } from "../context/WebsiteContext";
 
 const itemVariants = {
   open: {
@@ -17,7 +17,7 @@ const itemVariants = {
 
 export default function MobNav() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { theme } = useTheme();
   return (
     <motion.nav
       initial={false}
@@ -27,7 +27,8 @@ export default function MobNav() {
         height: "50px",
         position: "relative",
         boxShadow: "1px 1px 10px 1px lightgray",
-        backgroundColor: "white",
+        backgroundColor: theme.bg_color,
+        color: theme.text_color,
       }}
     >
       <Flex
@@ -87,7 +88,8 @@ export default function MobNav() {
           position: "fixed",
           top: "55px",
           left: 0,
-          backgroundColor: "#F6F6F6",
+          backgroundColor: theme.bg_color,
+          color: theme.text_color,
           width: "50vw",
           boxShadow: "rgba(0,0,0,0.2) 0px 4px 80px ", // this is not working why?
           // border: "2px solid black",

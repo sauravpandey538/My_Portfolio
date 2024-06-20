@@ -10,7 +10,9 @@ import Apple from "../public/Apple.png";
 import Nakhau from "../public/Nakhau.png";
 import Ecommerce from "../public/Ecommerce.png";
 import Game from "../public/Game.png";
+import { useTheme } from "../../context/WebsiteContext";
 export default function ProjectList() {
+  const { theme } = useTheme();
   const projects = [
     {
       id: 1,
@@ -48,7 +50,11 @@ export default function ProjectList() {
   ];
 
   return (
-    <Box overflow={"hidden"}>
+    <Box
+      overflow={"hidden"}
+      backgroundColor={theme.bg_color}
+      color={theme.text_color}
+    >
       {projects.map((project, index) => (
         <Flex
           my={"100px"}
@@ -82,7 +88,11 @@ export default function ProjectList() {
             <Text fontSize="20px" fontWeight={500} py={"10px"}>
               {project.projectTitle}
             </Text>
-            <Text color={"gray.600"}>{project.projectDescription}</Text>
+            <Text
+            //  color={"gray.600"}
+            >
+              {project.projectDescription}
+            </Text>
             <Flex gap={3} py="20px">
               <Link href={project.githubLink} isExternal>
                 <Button

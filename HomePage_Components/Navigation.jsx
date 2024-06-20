@@ -13,6 +13,7 @@ import {
   useBreakpointValue,
   Heading,
 } from "@chakra-ui/react";
+import { useTheme } from "../context/WebsiteContext";
 function Navigation() {
   const deviceWidth = useBreakpointValue({
     base: "base",
@@ -20,11 +21,13 @@ function Navigation() {
     md: "md",
     g: "lg",
   });
+  const { theme } = useTheme();
   return (
     <>
       {(deviceWidth === "md" || deviceWidth === "lg") && (
         <Flex
-          backgroundColor={"white"}
+          backgroundColor={theme.bg_color}
+          color={theme.text_color}
           h={"80px"}
           // border={"2px solid black"}
           alignItems={"center"}

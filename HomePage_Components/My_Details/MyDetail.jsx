@@ -12,21 +12,31 @@ import { IoLogoJavascript } from "react-icons/io";
 import { DiMongodb } from "react-icons/di";
 import { SiPostman } from "react-icons/si";
 import ViewCV from "../ViewCV";
+import { useTheme } from "../../context/WebsiteContext";
 function MyDetail({ profile }) {
+  const { theme } = useTheme();
   return (
-    <Box p={[["auto", "15px"], ["auto", "50px"], ["auto 200px"]]}>
+    <Box
+      p={[["auto", "15px"], ["auto", "50px"], ["auto 200px"]]}
+      backgroundColor={theme.bg_color}
+      color={theme.text_color}
+    >
       <Flex flexWrap={"wrap"}>
         <Box flex={1}>
           <Text
             fontSize={"30px"}
             fontWeight={800}
-            color={"gray.700"}
+            // color={"gray.700"}
             lineHeight={1.2}
           >
             {" "}
             Front-End React Developer 😀
           </Text>
-          <Text my={"20px"} color={"gray.700"} lineHeight={1.7}>
+          <Text
+            my={"20px"}
+            //  color={"gray.700"}
+            lineHeight={1.7}
+          >
             Hi, I'm Saurav Pandey. A passionate Front-end React <br /> Developer
             based in Kathmandu, Nepal
           </Text>
@@ -67,7 +77,7 @@ function MyDetail({ profile }) {
                 marginTop: "40px",
                 width: "300px",
                 height: "300px",
-                outline: "100px solid white",
+                outline: `100px solid ${theme.bg_color}`,
               }}
               animate={{
                 borderRadius: [
@@ -107,7 +117,12 @@ function MyDetail({ profile }) {
           w={["100%", "100%", "100%", "500px"]}
           textAlign={"center"}
           fontSize={["20px", "25px"]}
-          borderRight={[null, null, null, "2px solid black"]}
+          borderRight={[
+            null,
+            null,
+            null,
+            theme.bg_color === "white" ? "2px solid black" : "2px solid white",
+          ]}
         >
           {" "}
           I'm comfortable on{" "}
