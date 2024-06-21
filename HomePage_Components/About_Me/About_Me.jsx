@@ -1,9 +1,11 @@
 import React from "react";
 import { Box, Flex, Text, useBreakpointValue, Image } from "@chakra-ui/react";
 import { useTheme } from "../../context/WebsiteContext";
+import { useTranslation } from "react-i18next";
 
 function AboutMe() {
   const { theme } = useTheme();
+  const { t } = useTranslation();
 
   return (
     <Flex
@@ -17,6 +19,7 @@ function AboutMe() {
       id="about"
       backgroundColor={theme.bg_color}
       color={theme.text_color}
+      gap={5}
     >
       <Flex flex={1} display={"flex"} position={"relative"}>
         <Image
@@ -42,30 +45,16 @@ function AboutMe() {
         ></Box>
       </Flex>
       <Box flex={1} p={["40px auto", "40px auto", "40px auto", "40px 80px"]}>
-        {/* <Text
-          // color={"blue"}
-          fontWeight={700}
-          pt={"70px"}
-          fontSize={"25px"}
-        >
-          ABOUT ME
-        </Text> */}
-        <Text my={"20px"} fontSize={"30px"} fontWeight={800}>
+        <Text my={"20px"} fontSize={"30px"} fontWeight={800} maxW={"400px"}>
           {" "}
-          Front-end Developer <br /> based in Kathmandu, Nepal
+          {t("aboutMe.title")}
         </Text>
-        <Text
-        //  color={"gray.700"}
-        >
-          Hey, My name is Saurav, and I'm a Frontend Developer. My passion is to
-          create and develop a clean UI/UX for my users
-        </Text>
+        <Text>{t("aboutMe.name")}</Text>
         <Text
           my={"20px"}
           // color={"gray.700"}
         >
-          My main stack currently is React/Next.js in combination with Chakra UI
-          and Typescript{" "}
+          {t("aboutMe.stack")}
         </Text>
       </Box>
     </Flex>

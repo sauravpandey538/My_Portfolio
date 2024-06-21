@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import SauravCv from "./public/SauravCv.pdf";
 import { Button, Flex } from "@chakra-ui/react";
 import { FaFilePdf } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 function ViewCV() {
   const [showCV, setShowCV] = useState(false);
-
+  const { t } = useTranslation();
   const handleViewCV = () => {
     setShowCV(true);
   };
@@ -18,7 +19,8 @@ function ViewCV() {
         bg={"white"}
         leftIcon={<FaFilePdf />}
       >
-        View My CV
+        {/* View My CV */}
+        {t("myDetail.cv")}
       </Button>
       {showCV && (
         <Flex
@@ -37,7 +39,7 @@ function ViewCV() {
             top={"10px"}
             right={"20%"}
           >
-            Go back
+            {t("myDetail.cv_goBack")}
           </Button>
           <iframe
             src={SauravCv}

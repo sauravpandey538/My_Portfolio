@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useTransition } from "react";
 import { Box, Text, Flex, Image, Spacer } from "@chakra-ui/react";
 import { format } from "date-fns";
 import ProjectList from "./Project_List";
 import { motion } from "framer-motion";
 import { useTheme } from "../../context/WebsiteContext";
+import { useTranslation } from "react-i18next";
 function ProjectMainPage({ profile }) {
   const [dateTime, setDateTime] = useState(new Date());
   const dayOfWeek = format(dateTime, "EEEE").toUpperCase();
   const month = format(dateTime, "MMMM").toUpperCase();
   const day = format(dateTime, "d").toUpperCase();
   const { theme } = useTheme();
+  const { t } = useTranslation();
   return (
     <Box
       h={"auto"}
@@ -40,7 +42,7 @@ function ProjectMainPage({ profile }) {
               {dayOfWeek}, {month} {day}TH
             </Flex>
             <Text fontSize={"30px"} fontWeight={800}>
-              Projects
+              {t("project.project")}
             </Text>
           </Box>
           <Spacer />
@@ -72,7 +74,8 @@ function ProjectMainPage({ profile }) {
             mb={"10px"}
             h={"40px"}
           >
-            SocialMedia website is in process...
+            {/* SocialMedia website is in process... */}
+            {t("project.pendingStatus")}
           </Text>
         </motion.div>
       </Box>

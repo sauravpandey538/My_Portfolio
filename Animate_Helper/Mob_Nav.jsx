@@ -5,6 +5,7 @@ import { IoReorderThreeOutline } from "react-icons/io5";
 import { MdCancel } from "react-icons/md";
 import Texts from "./Texts";
 import { useTheme } from "../context/WebsiteContext";
+import { useTranslation } from "react-i18next";
 
 const itemVariants = {
   open: {
@@ -18,11 +19,12 @@ const itemVariants = {
 export default function MobNav() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
+  const { t } = useTranslation();
   const menuItems = [
-    { text: "Home", to: "home" },
-    { text: "About", to: "about" },
-    { text: "Projects", to: "projects" },
-    { text: "Contacts", to: "contacts" },
+    { text: "home", to: "home" },
+    { text: "about", to: "about" },
+    { text: "projects", to: "projects" },
+    { text: "contacts", to: "contacts" },
   ];
   return (
     <motion.nav
@@ -119,10 +121,15 @@ export default function MobNav() {
             onClick={() => setIsOpen(false)}
           >
             <button>
-              <Texts text={item.text} to={item.to} />
+              {/* <Texts text={item.text} to={item.to} /> */}
+              <Texts text={t(`navigation.${item.text}`)} to={item.to} />
             </button>
           </motion.li>
         ))}
+        {/* <Texts text={t("navigation.home")} to="home" />
+        <Texts text={t("navigation.about")} to="about" />
+        <Texts text={t("navigation.nav_project")} to="projects" />
+        <Texts text={t("navigation.contacts")} to="contacts" /> */}
       </motion.ul>
     </motion.nav>
   );

@@ -5,9 +5,11 @@ import { TbMapSearch } from "react-icons/tb";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { useTheme } from "../../context/WebsiteContext";
+import { useTranslation } from "react-i18next";
 
 function ContactMe() {
   const { theme } = useTheme();
+  const { t } = useTranslation();
   return (
     <Box
       display={"flex"}
@@ -26,11 +28,8 @@ function ContactMe() {
     >
       <Box>
         <Box>
-          {/* <Text fontWeight={700} pt={"70px"} fontSize={"22px"}>
-            CONTACT
-          </Text> */}
           <Text my={"10px"} fontSize={"30px"} fontWeight={800}>
-            Hit me up ! 👇
+            {t("contactMe.title")}
           </Text>
         </Box>
         <Flex my={"30px"} flexWrap={"wrap"} gap={2}>
@@ -46,12 +45,12 @@ function ContactMe() {
               <Icons name={TbMapSearch} />
             </Box>
             <Box my={"auto"}>
-              <Text fontWeight={700}>Location</Text>
+              <Text fontWeight={700}> {t("contactMe.location")}</Text>
               <Text
                 w={"auto"}
                 // color={"gray.600"}
               >
-                Samakhusi, Kathmandu
+                {t("contactMe.locationName")}
               </Text>
             </Box>
           </Flex>
@@ -68,12 +67,12 @@ function ContactMe() {
               <Icons name={MdOutlineMailOutline} />
             </Box>
             <Box my={"auto"}>
-              <Text fontWeight={700}>E-mail</Text>
+              <Text fontWeight={700}> {t("contactMe.email")}</Text>
               <Text
                 w={"auto"}
                 // color={"gray.600"}
               >
-                sauravpandey0325@gmail.com
+                {t("contactMe.emailName")}
               </Text>
             </Box>
           </Flex>
@@ -90,7 +89,7 @@ function ContactMe() {
               <Icons name={FiPhoneCall} />
             </Box>
             <Box my={"auto"}>
-              <Text fontWeight={700}>Phone</Text>
+              <Text fontWeight={700}> {t("contactMe.phone")}</Text>
               <Text
                 w={"auto"}
                 //  color={"gray.600"}

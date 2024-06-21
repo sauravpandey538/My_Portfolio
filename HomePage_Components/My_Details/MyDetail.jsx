@@ -1,20 +1,25 @@
 import React from "react";
-import { Box, Flex, Heading, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import Icons from "../../Animate_Helper/Icons";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { FaHtml5 } from "react-icons/fa6";
-import { SiChakraui } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaHtml5,
+  FaReact,
+  FaNodeJs,
+} from "react-icons/fa";
+import { SiChakraui, SiPostman } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
 import { DiMongodb } from "react-icons/di";
-import { SiPostman } from "react-icons/si";
+import { motion } from "framer-motion";
 import ViewCV from "../ViewCV";
 import { useTheme } from "../../context/WebsiteContext";
+import { useTranslation } from "react-i18next";
+
 function MyDetail({ profile }) {
   const { theme } = useTheme();
+  const { t } = useTranslation();
+
   return (
     <Box
       p={[["auto", "15px"], ["auto", "50px"], ["auto 200px"]]}
@@ -23,24 +28,12 @@ function MyDetail({ profile }) {
     >
       <Flex flexWrap={"wrap"}>
         <Box flex={1}>
-          <Text
-            fontSize={"30px"}
-            fontWeight={800}
-            // color={"gray.700"}
-            lineHeight={1.2}
-          >
-            {" "}
-            Front-End React Developer 😀
+          <Text fontSize={"30px"} fontWeight={800} lineHeight={1.2}>
+            {t("myDetail.title")}
           </Text>
-          <Text
-            my={"20px"}
-            //  color={"gray.700"}
-            lineHeight={1.7}
-          >
-            Hi, I'm Saurav Pandey. A passionate Front-end React <br /> Developer
-            based in Kathmandu, Nepal
+          <Text my={"20px"} lineHeight={1.7} maxW={"400px"}>
+            {t("myDetail.description")}
           </Text>
-
           <Flex gap={10} pl={"4px"}>
             <Icons
               name={FaLinkedin}
@@ -103,7 +96,6 @@ function MyDetail({ profile }) {
         </Box>
       </Flex>
 
-      {/* icons */}
       <Flex
         alignItems={"center"}
         h={"100px"}
@@ -124,8 +116,7 @@ function MyDetail({ profile }) {
             theme.bg_color === "white" ? "2px solid black" : "2px solid white",
           ]}
         >
-          {" "}
-          I'm comfortable on{" "}
+          {t("myDetail.comfortableOn")}
         </Text>
         <Flex gap={[4, 4, 5, 10]} justifyContent={"center"} w={"100%"}>
           <Icons name={FaHtml5} />
