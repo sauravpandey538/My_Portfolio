@@ -25,6 +25,7 @@ function MyDetail({ profile }) {
       p={[["auto", "15px"], ["auto", "50px"], ["auto 200px"]]}
       backgroundColor={theme.bg_color}
       color={theme.text_color}
+      id="home"
     >
       <Flex flexWrap={"wrap"}>
         <Box flex={1}>

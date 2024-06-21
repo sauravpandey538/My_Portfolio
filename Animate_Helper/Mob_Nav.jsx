@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, Button } from "@chakra-ui/react";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { MdCancel } from "react-icons/md";
 import Texts from "./Texts";
@@ -26,6 +26,23 @@ export default function MobNav() {
     { text: "projects", to: "projects" },
     { text: "contacts", to: "contacts" },
   ];
+  const iconRef = useRef();
+  const ulRef = useRef();
+
+  const handleMouseEvent = (e) => {
+    if (
+      ulRef &&
+      !ulRef.current.contains(e.target) &&
+      !iconRef.current.contains(e.target)
+    ) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleMouseEvent);
+    return () => document.removeEventListener("mousedown", handleMouseEvent);
+  }, []);
   return (
     <motion.nav
       initial={false}
@@ -52,6 +69,7 @@ export default function MobNav() {
           style={{ position: "absolute", left: "10px" }}
         >
           <motion.div
+            ref={iconRef}
             variants={{
               open: { rotate: 0 },
               closed: { rotate: 0 },
@@ -70,6 +88,7 @@ export default function MobNav() {
         </Box>
       </Flex>
       <motion.ul
+        ref={ulRef}
         variants={{
           open: {
             clipPath: "inset(0% 0% 0% 0% round 10px)",
@@ -118,18 +137,12 @@ export default function MobNav() {
               textAlign: "center",
               fontWeight: 500,
             }}
-            onClick={() => setIsOpen(false)}
           >
-            <button>
-              {/* <Texts text={item.text} to={item.to} /> */}
+            <Box>
               <Texts text={t(`navigation.${item.text}`)} to={item.to} />
-            </button>
+            </Box>
           </motion.li>
         ))}
-        {/* <Texts text={t("navigation.home")} to="home" />
-        <Texts text={t("navigation.about")} to="about" />
-        <Texts text={t("navigation.nav_project")} to="projects" />
-        <Texts text={t("navigation.contacts")} to="contacts" /> */}
       </motion.ul>
     </motion.nav>
   );

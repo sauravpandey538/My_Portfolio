@@ -31,7 +31,7 @@ function Navigation() {
             Saurav.dev
           </Text>
           <Spacer />
-          <Flex gap={5}>
+          <Flex gap={7}>
             <Texts text={t("navigation.home")} to="home" />
             <Texts text={t("navigation.about")} to="about" />
             <Texts text={t("navigation.projects")} to="projects" />
