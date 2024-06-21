@@ -10,6 +10,16 @@ function ProjectMainPage({ profile }) {
   const dayOfWeek = format(dateTime, "EEEE").toUpperCase();
   const month = format(dateTime, "MMMM").toUpperCase();
   const day = format(dateTime, "d").toUpperCase();
+
+  const options = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    weekday: "long",
+    era: "long",
+  };
+  const japaneseDate = dateTime.toLocaleDateString("ja-JP", options);
+
   const { theme } = useTheme();
   const { t } = useTranslation();
   return (
@@ -39,7 +49,15 @@ function ProjectMainPage({ profile }) {
               //  color={"gray.600"}
             >
               {" "}
-              {dayOfWeek}, {month} {day}TH
+              {t("project.project") !== "Projects" && (
+                <Text>{japaneseDate}</Text>
+              )}
+              {t("project.project") === "Projects" && (
+                <Text>
+                  {" "}
+                  {dayOfWeek}, {month} {day}TH
+                </Text>
+              )}
             </Flex>
             <Text fontSize={"30px"} fontWeight={800}>
               {t("project.project")}
@@ -61,10 +79,10 @@ function ProjectMainPage({ profile }) {
             y: 0,
             opacity: [0, 1],
           }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 1, delay: 0.4 }}
           style={{ overflow: "hidden" }}
         >
-          <Text
+          <Box
             w={"100%"}
             textAlign={"center"}
             bg={theme.text_color}
@@ -73,10 +91,18 @@ function ProjectMainPage({ profile }) {
             fontWeight={700}
             mb={"10px"}
             h={"40px"}
+            borderRadius={"20px"}
           >
-            {/* SocialMedia website is in process... */}
-            {t("project.pendingStatus")}
-          </Text>
+            <motion.div
+              whileInView={{
+                opacity: [0, 1],
+                y: [10, 0],
+              }}
+              transition={{ delay: 1.4, duration: 0.2 }}
+            >
+              {t("project.pendingStatus")}
+            </motion.div>
+          </Box>
         </motion.div>
       </Box>
     </Box>

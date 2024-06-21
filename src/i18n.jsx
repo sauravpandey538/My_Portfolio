@@ -20,8 +20,10 @@ i18n
             viewCode: "View Code",
             viewWebsite: "View Website",
             projectDescription: {
-              e_commerce: "Welcome to our one-stop shopping destination...",
-              games: "This website showcases my cherished games...",
+              e_commerce:
+                "Welcome to our one-stop shopping destination, where you can indulge in unlimited shopping. We cater to all your fashion and accessory needs with three distinct categories: men, women, and jewelry. For men, we offer a wide range of stylish and comfortable clothing and accessories, from casual wear to formal attire. Women will love our extensive collection of fashion-forward pieces, including dresses, tops, pants, and accessories to suit any style. Our jewelry category features exquisite pieces that add a touch of glamour to any look, including necklaces, bracelets, earrings, and rings. Enjoy unlimited shopping with us and elevate your style effortlessly!",
+              games:
+                "This website showcases my cherished games, all of which I have personally created. It features simple games such as TicTacToe, Snake, and other 2D games. The TicTacToe game offers a unique twist: the cell value gets deleted after the 6th turn, ensuring no game ends in a draw. While the Snake game may seem slow initially, once you get the hang of it, you'll be speeding through like a pro.",
             },
             projectNames: {
               e_commerce: "E-commerce",
@@ -72,9 +74,9 @@ i18n
             viewWebsite: "ウェブサイトを見る",
             projectDescription: {
               e_commerce:
-                "無限のショッピングを楽しめるワンストップショッピングデスティネーションへようこそ...",
+                "無制限にお買い物をお楽しみいただける、ワンストップ ショッピング サイトへようこそ。メンズ、ウィメンズ、ジュエリーの 3 つの異なるカテゴリーで、ファッションとアクセサリーのあらゆるニーズにお応えします。メンズ向けには、カジュアルウェアからフォーマルウェアまで、スタイリッシュで快適なウェアやアクセサリーを幅広く取り揃えています。女性は、どんなスタイルにも合うドレス、トップス、パンツ、アクセサリーなど、ファッション性の高いアイテムの幅広いコレクションを気に入るはずです。当社のジュエリー カテゴリーには、ネックレス、ブレスレット、イヤリング、リングなど、どんな装いにも華やかさを加える絶妙なアイテムが揃っています。無制限のショッピングを楽しんで、簡単にスタイルを向上させましょう!",
               games:
-                "このウェブサイトでは、私が個人的に作成した大切なゲームを紹介しています...",
+                "このウェブサイトでは、私が個人的に作成した大切なゲームを紹介しています。 TicTacToe、Snake、その他の 2D ゲームなどのシンプルなゲームが特徴です。 TicTacToe ゲームには、ユニークな工夫が施されています。つまり、6 ターン後にセルの値が削除され、ゲームが引き分けで終わることはありません。 Snake ゲームは最初は遅く見えるかもしれませんが、コツを掴めばプロのようにスピードを出せるようになります。",
             },
             projectNames: {
               e_commerce: "電子商取引",
