@@ -10,31 +10,29 @@ function Footer() {
     <Flex
       h={"20vh"}
       w={"100%"}
-      // backgroundColor={theme.bg_color}
-      // color={theme.text_color}
       bg={"black"}
-      justifyContent={"center"}
       alignItems={"center"}
-      px={["50px", null, null, "300px"]}
+      px={["50px", null, null, "auto"]}
       overflow={"hidden"}
+      justifyContent="space-between"
+      display={["grid", "grid", "flex", "flex"]}
     >
-      <Flex
-        justifyContent={"space-between"}
-        display={["grid", "grid", "flex", "flex"]}
-        w={"100%"}
-        gap={3}
+      <Text
+        fontWeight={600}
+        fontSize={"23px"}
+        color={"white"}
+        width={"auto"}
+        textAlign={"left"}
       >
-        <Text fontWeight={600} fontSize={"23px"} color={"white"}>
-          {" "}
-          Copyright @ {thisYear}. All rights reserved
-        </Text>
-        <Flex gap={10} pl={"4px"} color={"white"} justifyContent={"center"}>
-          <Icons
-            name={FaLinkedin}
-            link="https://www.linkedin.com/in/saurav-pandey-b3648530a"
-          />
-          <Icons name={FaGithub} link="https://github.com/sauravpandey538" />
-        </Flex>
+        {" "}
+        Copyright @ {thisYear}. All rights reserved
+      </Text>
+      <Flex gap={10} pl={"4px"} color={"white"} justifyContent={"left"}>
+        <Icons
+          name={FaLinkedin}
+          link="https://www.linkedin.com/in/saurav-pandey-b3648530a"
+        />
+        <Icons name={FaGithub} link="https://github.com/sauravpandey538" />
       </Flex>
     </Flex>
   );

@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 import Nakhau from "../public/Nakhau.png";
 import Ecommerce from "../public/Ecommerce.png";
 import Game from "../public/Game.png";
-
+import SocialMedia from "../public/SocialMedia.png";
 export default function ProjectList() {
   const { theme } = useTheme();
   const { t, i18n } = useTranslation();
@@ -17,6 +17,13 @@ export default function ProjectList() {
   const projects = [
     {
       id: 1,
+      projectName: "social_media",
+      projectMainImage: SocialMedia,
+      websiteLink: "https://social-media-frontend-sage.vercel.app",
+      githubLink: "https://github.com/sauravpandey538/SocialMediaFrontend",
+    },
+    {
+      id: 2,
       projectName: "e_commerce",
       projectMainImage: Ecommerce,
       websiteLink:
@@ -24,7 +31,7 @@ export default function ProjectList() {
       githubLink: "https://github.com/sauravpandey538/E-Commerce",
     },
     {
-      id: 2,
+      id: 3,
       projectName: "games",
       projectMainImage: Game,
       websiteLink: "https://games-six-sage.vercel.app",
