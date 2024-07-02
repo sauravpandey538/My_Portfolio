@@ -1,6 +1,8 @@
 import React from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Icons from "../../Animate_Helper/Icons";
+import { RiTailwindCssFill } from "react-icons/ri";
+
 import {
   FaGithub,
   FaLinkedin,
@@ -120,10 +122,10 @@ function MyDetail({ profile }) {
           {t("myDetail.comfortableOn")}
         </Text>
         <Flex gap={[4, 4, 5, 10]} justifyContent={"center"} w={"100%"}>
-          <Icons name={FaHtml5} />
-          <Icons name={IoLogoJavascript} />
-          <Icons name={SiChakraui} />
           <Icons name={FaReact} />
+          <Icons name={IoLogoJavascript} />
+          <Icons name={RiTailwindCssFill} />
+          <Icons name={SiChakraui} />
           <Icons name={FaNodeJs} />
           <Icons name={DiMongodb} />
           <Icons name={SiPostman} />

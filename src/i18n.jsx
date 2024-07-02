@@ -16,7 +16,7 @@ i18n
         translation: {
           project: {
             project: "Projects",
-            pendingStatus: "SocialMedia website is in process...",
+            pendingStatus: "I am studying ",
             viewCode: "View Code",
             viewWebsite: "View Website",
             projectDescription: {
@@ -75,7 +75,7 @@ i18n
         translation: {
           project: {
             project: "プロジェクト",
-            pendingStatus: "ソーシャルメディア Web サイトは処理中です...",
+            pendingStatus: "今、勉強していることは",
             viewCode: "コードを見る",
             viewWebsite: "ウェブサイトを見る",
             projectDescription: {

@@ -5,6 +5,10 @@ import ProjectList from "./Project_List";
 import { motion } from "framer-motion";
 import { useTheme } from "../../context/WebsiteContext";
 import { useTranslation } from "react-i18next";
+import { SiReactquery } from "react-icons/si";
+import { TbBrandTypescript } from "react-icons/tb";
+import { RiNextjsLine } from "react-icons/ri";
+
 function ProjectMainPage({ profile }) {
   const [dateTime, setDateTime] = useState(new Date());
   const dayOfWeek = format(dateTime, "EEEE").toUpperCase();
@@ -94,13 +98,33 @@ function ProjectMainPage({ profile }) {
             borderRadius={"20px"}
           >
             <motion.div
+              style={{ display: "flex", justifyContent: "center" }}
               whileInView={{
                 opacity: [0, 1],
                 y: [10, 0],
               }}
               transition={{ delay: 1.4, duration: 0.2 }}
             >
-              {t("project.pendingStatus")}
+              <p>{t("project.pendingStatus")}</p>
+              <Box
+                display={"inline-flex"}
+                gap={2}
+                marginLeft={"10px"}
+                alignItems={"baseline"}
+              >
+                <span>
+                  <SiReactquery />
+                </span>
+                <span>,</span>
+                <span>
+                  <TbBrandTypescript />
+                </span>
+                <span> and </span>
+
+                <span>
+                  <RiNextjsLine />
+                </span>
+              </Box>
             </motion.div>
           </Box>
         </motion.div>
