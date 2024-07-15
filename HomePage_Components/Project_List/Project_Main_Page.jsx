@@ -106,7 +106,7 @@ function ProjectMainPage({ profile }) {
               transition={{ delay: 1.4, duration: 0.2 }}
             >
               <p>{t("project.pendingStatus")}</p>
-              <Box
+              {/* <Box
                 display={"inline-flex"}
                 gap={2}
                 marginLeft={"10px"}
@@ -124,7 +124,7 @@ function ProjectMainPage({ profile }) {
                 <span>
                   <RiNextjsLine />
                 </span>
-              </Box>
+              </Box> */}
             </motion.div>
           </Box>
         </motion.div>

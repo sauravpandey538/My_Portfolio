@@ -3,7 +3,7 @@ import { Box, Text, Flex, Button, Image, Link } from "@chakra-ui/react";
 import { FaGithub, FaGlobe } from "react-icons/fa";
 import { useTheme } from "../../context/WebsiteContext";
 import { useTranslation } from "react-i18next";
-
+import CollegeWorksPro from "../public/CollegeWorksPro.png";
 // import Amazon from "../public/Amazon.png";
 // import Apple from "../public/Apple.png";
 import Nakhau from "../public/Nakhau.png";
@@ -32,6 +32,13 @@ export default function ProjectList() {
     },
     {
       id: 3,
+      projectName: "college_works_pro",
+      projectMainImage: CollegeWorksPro,
+      websiteLink: "https://collegeworkspro.vercel.app",
+      githubLink: "https://github.com/sauravpandey538/CollegeWorksPro",
+    },
+    {
+      id: 4,
       projectName: "games",
       projectMainImage: Game,
       websiteLink: "https://games-six-sage.vercel.app",
