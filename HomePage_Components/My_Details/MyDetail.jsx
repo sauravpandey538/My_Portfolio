@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Icons from "../../Animate_Helper/Icons";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { RiNextjsLine } from "react-icons/ri";
 
 import {
   FaGithub,
@@ -123,7 +124,7 @@ function MyDetail({ profile }) {
         </Text>
         <Flex gap={[4, 4, 5, 10]} justifyContent={"center"} w={"100%"}>
           <Icons name={FaReact} />
-          <Icons name={IoLogoJavascript} />
+          <Icons name={RiNextjsLine} />
           <Icons name={RiTailwindCssFill} />
           <Icons name={SiChakraui} />
           <Icons name={FaNodeJs} />

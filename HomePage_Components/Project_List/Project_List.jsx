@@ -10,6 +10,7 @@ import Nakhau from "../public/Nakhau.png";
 import Ecommerce from "../public/Ecommerce.png";
 import Game from "../public/Game.png";
 import SocialMedia from "../public/SocialMedia.png";
+import Auth from "../public/0Auth.png";
 export default function ProjectList() {
   const { theme } = useTheme();
   const { t, i18n } = useTranslation();
@@ -39,6 +40,14 @@ export default function ProjectList() {
     },
     {
       id: 4,
+      projectName: "auth",
+      projectMainImage: Auth,
+
+      websiteLink: "https://0-auth.vercel.app",
+      githubLink: "https://github.com/sauravpandey538/0-Auth",
+    },
+    {
+      id: 5,
       projectName: "games",
       projectMainImage: Game,
       websiteLink: "https://games-six-sage.vercel.app",

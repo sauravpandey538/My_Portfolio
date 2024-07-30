@@ -16,8 +16,7 @@ i18n
         translation: {
           project: {
             project: "Projects",
-            pendingStatus:
-              "Authentication system using NextJS is coming soon. ",
+            pendingStatus: "Learning MySQL with ShadCN...",
             viewCode: "View Code",
             viewWebsite: "View Website",
             projectDescription: {
@@ -30,18 +29,21 @@ i18n
                 "This is my social media project built on the MERN stack. We can upload a post, like a post and comment too. we can add friends too.",
               college_works_pro:
                 "This is a assignment helper to the college student where they can send their details along with plan suitable for them at minimum charge. It used discord webhook to call api which helps to get realtime message.",
+              auth: "This is a basic authentication system built with NextAuth and shadCN. It includes an OTP system for email verification and password changes. It automatically checks for unique usernames or emails. Additionally, it utilizes Zod for validation.",
             },
             projectNames: {
               e_commerce: "E-commerce",
               games: "Games",
               social_media: "SocialMedia",
               college_works_pro: "CollegeWorksPro",
+              auth: "0-Auth",
             },
             projectTitle: {
               e_commerce: "Framer-Motion | ChakraUI | Axios",
               games: "JS | Framer-Motion",
               social_media: " MERN | Vercel | ChakraUI | Framer-Motion",
               college_works_pro: "NextJS | TailwindCSS | TS | WebHook",
+              auth: "NextAuth | Google 0-Auth | TailwindCSS | ZOD",
             },
           },
           navigation: {
@@ -78,7 +80,7 @@ i18n
         translation: {
           project: {
             project: "プロジェクト",
-            pendingStatus: "NextJSを利用した認証システムも近日公開予定です。",
+            pendingStatus: "MySQLとShadCNを学んでいます！",
             viewCode: "コードを見る",
             viewWebsite: "ウェブサイトを見る",
             projectDescription: {
@@ -90,12 +92,14 @@ i18n
                 "これはMERNスタックで構築された私のソーシャルメディアプロジェクトです。投稿をアップロードしたり、投稿に「いいね」したり、コメントを追加することができます。友達を追加することもできます。",
               college_works_pro:
                 "これは大学生向けの課題ヘルパーで、最低料金で自分に合ったプランと一緒に詳細を送ることができます。ディスコードウェブフックを使用してリアルタイムメッセージを取得するAPIを呼び出します。",
+              auth: "これは NextAuth と shadCN で構築された基本認証システムです。電子メール検証とパスワード変更のための OTP システムが含まれています。一意のユーザー名または電子メールを自動的にチェックします。さらに、検証に Zod を利用します。",
             },
             projectNames: {
               e_commerce: "電子商取引",
               games: "ゲーム",
               social_media: "ソーシャルメディア",
               college_works_pro: "カレッジワークスプロ",
+              auth: "認証",
             },
             // projectTitle: {
             //   e_commerce:
