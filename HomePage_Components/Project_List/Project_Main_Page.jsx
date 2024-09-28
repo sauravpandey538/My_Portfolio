@@ -66,6 +66,9 @@ function ProjectMainPage({ profile }) {
             <Text fontSize={"30px"} fontWeight={800}>
               {t("project.project")}
             </Text>
+            <Text fontSize={"12px"} fontWeight={200}>
+              Untill June 2024
+            </Text>
           </Box>
           <Spacer />
           <Image

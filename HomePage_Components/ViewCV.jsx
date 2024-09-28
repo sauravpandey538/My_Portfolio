@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import SauravCv from "./public/SauravCv.pdf";
 import { Button, Flex } from "@chakra-ui/react";
 import { FaFilePdf } from "react-icons/fa";
 import { useTranslation } from "react-i18next";

@@ -45,9 +45,9 @@ function MyDetail({ profile }) {
             />
             <Icons name={FaGithub} link="https://github.com/sauravpandey538" />
           </Flex>
-          <Box my={"20px"}>
+          {/* <Box my={"20px"}>
             <ViewCV />
-          </Box>
+          </Box> */}
         </Box>
         <Box
           flex={1}

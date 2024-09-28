@@ -16,7 +16,7 @@ i18n
         translation: {
           project: {
             project: "Projects",
-            pendingStatus: "Learning MySQL with ShadCN...",
+            pendingStatus: "Follow GitHub for realtime details.",
             viewCode: "View Code",
             viewWebsite: "View Website",
             projectDescription: {
